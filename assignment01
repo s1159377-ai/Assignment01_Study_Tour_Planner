@@ -1,1 +1,58 @@
+# Declaration: this code is my own individual and original work without an AI
+# S115937 Cheng Meng Lee
+# INT2067 - Assignment01
+
+# outputP1
+print("Welcome to the Global Study Tour Budgeting Tool")
+print("-" * 55)
+
+# outputP2
+tourcost = float(input("Enter base tour cost per student (HKD): "))
+students = int(input("Enter number of students: "))
+print("-" * 55)
+
+# outputP3
+print("Calculation Summary")
+estimatedrevenue = (tourcost*students)*1.05
+print(f"Adjusted Total (with 5% Fee): {estimatedrevenue:.2f}")
+
+# outputP3 - dicount if/elif/else
+if students >= 30:
+ discount = 0.15
+ print("Applied Discount: 15.00%")
+elif students >= 15:
+ discount = 0.05
+ print("Applied Discount: 5.00%")
+else:
+ discount = 0
+ print("No discount.")
+
+# outputP3 - final discounted price
+finaldiscountprice = estimatedrevenue*(1-discount)
+print(f"Final Discounted Price: {finaldiscountprice:.2f}")
+print("-" * 55)
+
+# outputP4
+print("Payment Lookup")
+milestone = input("Enter milestone (deposit, q1, q2, or final):")
+
+# outputP4 - payment schedule if/elif/else
+if milestone == "deposit":
+ ratio = 0
+ print(f"Your Deposit payment is: {finaldiscountprice*ratio:.2f}")
+elif milestone == "q1":
+ ratio = 0.25
+ print(f"Your First Quarter payment is: ${finaldiscountprice*ratio:.2f}")
+elif milestone == "q2":
+ ratio = 0.25
+ print(f"Your First Quarter payment is: ${finaldiscountprice*ratio:.2f}")
+elif milestone == "final":
+ ratio = 0.5
+ print(f"Your First Quarter payment is: ${finaldiscountprice*ratio:.2f}")
+else:
+ print("Invalid timing entered.")
+
+
+
+
 
