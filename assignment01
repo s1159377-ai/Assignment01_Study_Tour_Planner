@@ -9,7 +9,7 @@ print("-" * 55)
 
 # outputP2
 tourcost = float(input("Enter base tour cost per student (HKD): "))
-students = int(input("Enter number of students: "))
+students = float(input("Enter number of students: "))
 print("-" * 55)
 
 # outputP3
@@ -40,16 +40,16 @@ milestone = input("Enter milestone (deposit, q1, q2, or final):")
 # outputP4 - payment schedule if/elif/else
 if milestone == "deposit":
  ratio = 0
- print(f"Your Deposit payment is: {finaldiscountprice*ratio:.2f}")
+ print(f"Your Deposit payment is: ${finaldiscountprice*ratio:.2f}")
 elif milestone == "q1":
  ratio = 0.25
  print(f"Your First Quarter payment is: ${finaldiscountprice*ratio:.2f}")
 elif milestone == "q2":
  ratio = 0.25
- print(f"Your First Quarter payment is: ${finaldiscountprice*ratio:.2f}")
+ print(f"Your Second Quarter payment is: ${finaldiscountprice*ratio:.2f}")
 elif milestone == "final":
  ratio = 0.5
- print(f"Your First Quarter payment is: ${finaldiscountprice*ratio:.2f}")
+ print(f"Your Final payment is: ${finaldiscountprice*ratio:.2f}")
 else:
  print("Invalid timing entered.")
 
